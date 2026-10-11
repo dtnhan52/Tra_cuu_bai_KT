@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Tra cứu bài làm</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Tra cứu bài làm</h1>
+  <p class="sub">Xem điểm, từng câu và ảnh phiếu trả lời của em.</p>
+</header>
+<main>
+  <form id="form" autocomplete="off">
+    <label for="code">Mã tra cứu (nằm trong mã QR trên phiếu)</label>
+    <div class="row">
+      <input id="code" inputmode="text" autocapitalize="characters" spellcheck="false" placeholder="Quét mã QR trên phiếu, hoặc gõ 16 ký tự" maxlength="24">
+      <button type="submit" id="go">Xem bài</button>
+    </div>
+    <p class="msg" id="msg" role="status"></p>
+  </form>
+  <section id="result" hidden>
+    <div class="who">
+      <div><b id="who-name"></b><span id="who-class"></span></div>
+      <button type="button" id="logout" class="link">Thoát</button>
+    </div>
+    <div id="exams"></div>
+  </section>
+</main>
+<div id="viewer" hidden><img id="viewer-img" alt="Ảnh phiếu trả lời"><button type="button" id="viewer-close">Đóng ✕</button></div>
+<footer>Mã tra cứu là của riêng em, không đưa cho người khác. Thấy sai sót, báo giáo viên bộ môn.</footer>
+<script src="app.js"></script>
+</body>
+</html>
